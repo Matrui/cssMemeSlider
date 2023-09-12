@@ -11,6 +11,8 @@ body{
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
     position: relative;
     max-width: 1024px;
     max-height: 768px;
@@ -18,14 +20,127 @@ body{
     background-color: #a49e59;
 }
 
+.slider-box{
+    position: relative;
+    overflow: hidden;
+    height: 200%;
+    width: 100%;
+}
 
 .slider{
-    overflow: hidden;
+    width: 400%;
+    height: 90%;
     display: flex;
+    transition: all .5s ease;
+}
+
+.meme{
+    width: 25%;
 }
 
 img{
+    border-radius: 20px;
     width: 100%;
     height: auto;
-    border-radius: 20px;
+}
+
+.bottom-side{
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    position: absolute;
+    visibility: hidden;
+}
+
+.buttons{
+    display: flex;
+}
+
+
+
+
+.nav-background{
+    height: 50px;
+    width: 400%;
+    background-color: aquamarine;
+}
+
+#l4{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+#l3{
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+#l2{
+    position: absolute;
+    right: 70px;
+    bottom: 10px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+#l1{
+    position: absolute;
+    right: 100px;
+    bottom: 10px;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+#l1:hover, #l2:hover, #l3:hover, #l4:hover{
+    background-color: #dbd376;
+    transform: scale(1.1);
+}
+
+#b1:checked ~ .slider{
+    margin-left: 0;
+}
+#b1:checked ~ #l1{
+    background-color: #dbd376;
+}
+#b2:checked ~ .slider{
+    margin-left: -100%;
+}
+#b2:checked ~ #l2{
+    background-color: #dbd376;
+}
+#b3:checked ~ .slider{
+    margin-left: -200%;
+}
+#b3:checked ~ #l3{
+    background-color: #dbd376;
+}
+#b4:checked ~ .slider{
+    margin-left: -300%;
+}
+#b4:checked ~ #l4{
+    background-color: #dbd376;
 }
