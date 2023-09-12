@@ -46,15 +46,15 @@ img{
 
 .text{
   position: absolute;
-  left: 10px;
+  left: 5px;
   bottom: 10px;
   line-height: 30px;
   font-size: 20px;
   border-radius: 5px;
   background-color: #FFFFFF;
   font-family: Arial, Helvetica, sans-serif;
-  /* transition: all .4s ease; */
-  visibility: hidden;
+  transition: all .1s ease;
+  opacity: 0;
 }
 
 input{
@@ -73,7 +73,7 @@ input{
 
 #l4{
     position: absolute;
-    right: 10px;
+    right: 5px;
     bottom: 10px;
     border-radius: 50%;
     height: 20px;
@@ -85,7 +85,7 @@ input{
 }
 #l3{
     position: absolute;
-    right: 40px;
+    right: 35px;
     bottom: 10px;
     border-radius: 50%;
     height: 20px;
@@ -97,7 +97,7 @@ input{
 }
 #l2{
     position: absolute;
-    right: 70px;
+    right: 65px;
     bottom: 10px;
     border-radius: 50%;
     height: 20px;
@@ -109,7 +109,7 @@ input{
 }
 #l1{
     position: absolute;
-    right: 100px;
+    right: 95px;
     bottom: 10px;
     border-radius: 50%;
     height: 20px;
@@ -125,6 +125,29 @@ input{
     transform: scale(1.1);
 }
 
+@media (max-width: 1024px) {
+    .text{
+        bottom: 70px;
+        left: 0px;
+        } 
+    .nav-background{
+        height: 140px;
+    }
+    #l1{
+        left: 5px;
+    }
+    #l2{
+        left: 35px;
+    }
+    #l3{
+        left: 65px;
+    }
+    #l4{
+        left: 95px;
+    }
+    
+}
+
 
 
 #b1:checked ~ .slider{
@@ -134,7 +157,8 @@ input{
     background-color: #dbd376;
 }
 #b1:checked ~ #t1{
-    visibility: visible;
+    transition: all 2s ease;
+    opacity: 1;
 }
 #b2:checked ~ .slider{
     margin-left: -100%;
@@ -143,7 +167,8 @@ input{
     background-color: #dbd376;
 }
 #b2:checked ~ #t2{
-    visibility: visible;
+    transition: all 2s ease;
+    opacity: 1;
 }
 #b3:checked ~ .slider{
     margin-left: -200%;
@@ -152,7 +177,8 @@ input{
     background-color: #dbd376;
 }
 #b3:checked ~ #t3{
-    visibility: visible;
+    transition: all 2s ease;
+    opacity: 1;
 }
 #b4:checked ~ .slider{
     margin-left: -300%;
@@ -161,5 +187,6 @@ input{
     background-color: #dbd376;
 }
 #b4:checked ~ #t4{
-    visibility: visible;
+    transition: all 2s ease;
+    opacity: 1;
 }
