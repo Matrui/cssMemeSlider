@@ -14,5 +14,18 @@ body{
     position: relative;
     max-width: 1024px;
     max-height: 768px;
+    padding: 10px;
     background-color: #a49e59;
+}
+
+
+.slider{
+    overflow: hidden;
+    display: flex;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
 }
