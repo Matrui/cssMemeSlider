@@ -44,9 +44,17 @@ img{
     height: auto;
 }
 
-.bottom-side{
-    display: flex;
-    justify-content: space-between;
+.text{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  line-height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  /* transition: all .4s ease; */
+  visibility: hidden;
 }
 
 input{
@@ -54,9 +62,6 @@ input{
     visibility: hidden;
 }
 
-.buttons{
-    display: flex;
-}
 
 
 
@@ -64,7 +69,6 @@ input{
 .nav-background{
     height: 50px;
     width: 400%;
-    background-color: aquamarine;
 }
 
 #l4{
@@ -115,10 +119,13 @@ input{
     cursor: pointer;
     transition: all .4s ease;
 }
+
 #l1:hover, #l2:hover, #l3:hover, #l4:hover{
     background-color: #dbd376;
     transform: scale(1.1);
 }
+
+
 
 #b1:checked ~ .slider{
     margin-left: 0;
@@ -126,11 +133,17 @@ input{
 #b1:checked ~ #l1{
     background-color: #dbd376;
 }
+#b1:checked ~ #t1{
+    visibility: visible;
+}
 #b2:checked ~ .slider{
     margin-left: -100%;
 }
 #b2:checked ~ #l2{
     background-color: #dbd376;
+}
+#b2:checked ~ #t2{
+    visibility: visible;
 }
 #b3:checked ~ .slider{
     margin-left: -200%;
@@ -138,9 +151,15 @@ input{
 #b3:checked ~ #l3{
     background-color: #dbd376;
 }
+#b3:checked ~ #t3{
+    visibility: visible;
+}
 #b4:checked ~ .slider{
     margin-left: -300%;
 }
 #b4:checked ~ #l4{
     background-color: #dbd376;
+}
+#b4:checked ~ #t4{
+    visibility: visible;
 }
